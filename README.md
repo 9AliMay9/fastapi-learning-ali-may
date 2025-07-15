@@ -1,88 +1,74 @@
 # FastAPI Learning - Ali May
 
-> 🚀 This repository records my FastAPI learning journey and practice code.
+A hands-on journey to mastering FastAPI backend development.  
+本项目记录了 Ali May 通过实战学习 FastAPI 后端开发的全过程。
 
 ---
 
-## 项目简介 / Project Description
-
-这是 Ali May 的 FastAPI 学习笔记与示例代码集合，旨在通过实战掌握 FastAPI 核心机制、依赖注入、中间件、响应模型等知识点。
-
-This repository contains FastAPI learning notes and example codes by Ali May, aiming to master FastAPI core features, dependency injection, middleware, response models, and more through hands-on practice.
-
----
-
-## 环境准备 / Environment Setup
-
-* Python 3.11+
-* [PDM](https://pdm.fming.dev/) for dependency management
-* VSCode or any preferred IDE
-* WSL2 (optional, for Windows users)
-
----
-
-## 快速开始 / Quick Start
+## 🚀 Quick Start / 快速开始
 
 ```bash
 git clone https://github.com/9AliMay9/fastapi-learning-ali-may.git
 cd fastapi-learning-ali-may
-pdm install
-pdm run uvicorn main:app --reload
-```
+pdm install        # 安装依赖
+pdm run uvicorn main:app --reload    # 启动项目
+````
 
-访问 [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs) 查看自动生成的 Swagger UI。
+访问 [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs) 查看自动生成的 Swagger UI 接口文档。
 
 ---
 
-## 目录结构 / Project Structure
+## 📋 Environment / 环境要求
 
-```
+* Python 3.11+
+* PDM (Python 包管理工具)
+* FastAPI
+* Uvicorn (ASGI 服务器)
+
+确保你的 Python 环境中已安装上述依赖。
+
+---
+
+## 🗂 Project Structure / 项目结构
+
+```plaintext
 fastapi-learning-ali-may/
-├── main.py               # FastAPI 主程序
-├── README.md             # 本说明文件
+├── main.py               # 主程序入口
+├── README.md             # 项目说明文档（你正在看的文件）
 ├── pyproject.toml        # PDM 配置文件
-└── .venv/                # 虚拟环境文件夹（忽略上传）
+├── pdm.lock              # 依赖锁定文件
+├── .gitignore            # Git 忽略文件（推荐忽略 .venv 等）
+└── ...
 ```
 
 ---
 
-## 已学内容 / Completed Topics
+## 📚 About This Project / 项目介绍
 
-* FastAPI 基础路由与请求处理
-* Pydantic 模型与数据验证
-* 依赖注入（Depends）机制
-* 中间件基础示例
-* 响应模型与字段控制（include / exclude）
-* 错误处理与 HTTPException
-* POST/GET 请求示例
+本项目为 Ali May 在学习 FastAPI 过程中编写的示例代码和笔记，包含：
 
----
+* FastAPI 路由示例
+* Pydantic 模型定义
+* 依赖注入与请求验证
+* 响应模型与字段控制
+* 中间件使用
+* 错误处理
 
-## 后续计划 / Next Steps
-
-* 学习 SQLModel/SQLAlchemy 与数据库操作
-* 掌握 OAuth2 + JWT 认证机制
-* 探索 Docker 容器化与部署
-* 构建完整任务管理 API 项目
+欢迎 fork 并提出 issue 交流学习。
 
 ---
 
-## 联系 / Contact
+## 📬 Contact / 联系方式
 
-欢迎提出建议和交流！
-
-GitHub: [https://github.com/9AliMay9](https://github.com/9AliMay9)
-Email: 2628839532@qq.com
+* GitHub: [https://github.com/9AliMay9](https://github.com/9AliMay9)
 
 ---
 
-## 版权声明 / License
+## 📝 License / 许可
 
-本项目采用 MIT 许可证，详见 LICENSE 文件。
+本项目采用 MIT 许可证，详情见 LICENSE 文件。
 
 ---
 
-### 备注
+**感谢阅读！Thank you for visiting!**
 
-* 以上命令中的 `pdm` 是项目依赖管理工具，确保你已安装并配置好。
-* WSL2 是 Windows 用户推荐的 Linux 子系统环境，非必需。
