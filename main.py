@@ -1,22 +1,16 @@
 from fastapi import FastAPI
-from pydantic import BaseModel
-from typing import List
+import time
+import asyncio
 
 app = FastAPI()
 
-class User(BaseModel):
-    id: int
-    name: str
-    email: str
+@app.get("/sync")
+def sync_example():
+    time.sleep(2)
+    return {"message": "This is a sync endpoint"}
 
-users_db = [
-        {"id": 1, "name": "Alice", "email": "alice@example.com"},
-        {"id": 2, "name": "Bob", "email": "bob@example.com"}
-]
+@app.get("/async")
+async def async_example():
+    await asyncio.sleep(2)
+    return {"message": "This is an async endpoint"}
 
-@app.get("/users")
-async def get_users():
-    return [
-        User(**user).dict(include={"name"})
-        for user in users_db
-    ]
